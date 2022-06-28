@@ -1,0 +1,8 @@
+add_custom_target(mcuboot_shared_property_target)
+set_property(TARGET mcuboot_shared_property_target  PROPERTY KERNEL_HEX_NAME;zephyr.hex)
+set_property(TARGET mcuboot_shared_property_target  PROPERTY ZEPHYR_BINARY_DIR;C:/apoplexmed/Appli/ichip/build_1/mcuboot/zephyr)
+set_property(TARGET mcuboot_shared_property_target  PROPERTY KERNEL_ELF_NAME;zephyr.elf)
+set_property(TARGET mcuboot_shared_property_target  PROPERTY BUILD_BYPRODUCTS;C:/apoplexmed/Appli/ichip/build_1/mcuboot/zephyr/zephyr.hex;C:/apoplexmed/Appli/ichip/build_1/mcuboot/zephyr/zephyr.elf)
+set_property(TARGET mcuboot_shared_property_target  PROPERTY SIGNATURE_KEY_FILE;C:/apoplexmed/keys/key_ecdsap256.pem)
+set_property(TARGET mcuboot_shared_property_target APPEND PROPERTY PM_YML_DEP_FILES;C:/ncs/v1.9.1/bootloader/mcuboot/boot/zephyr/pm.yml)
+set_property(TARGET mcuboot_shared_property_target APPEND PROPERTY PM_YML_FILES;C:/apoplexmed/Appli/ichip/build_1/mcuboot/zephyr/include/generated/pm.yml)

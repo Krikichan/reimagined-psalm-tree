@@ -1,0 +1,25 @@
+{
+    "format-version": 0,
+    "time": 1656411030,
+    "files": [
+        {
+            "load_address": 131584,
+            "version_MCUBOOT": "0.0.0+0",
+            "type": "application",
+            "board": "nrf9160dk_nrf9160",
+            "soc": "nRF9160_SICA",
+            "size": 222867,
+            "file": "app_update.bin",
+            "modtime": 1656411030
+        }
+    ],
+    "name": "ichip",
+    "firmware": {
+        "zephyr": {
+            "revision": "b05b8ad63acf30e08a570ce553831a06db27a2e0"
+        },
+        "nrf": {
+            "revision": "126fad0e2e5cbe5b965a45efc6a5e31f40d6020c-dirty"
+        }
+    }
+}

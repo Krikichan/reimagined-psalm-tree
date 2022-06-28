@@ -1,0 +1,9 @@
+// To get started, press Ctrl+Space to bring up the completion menu and view the available nodes.
+// For more help, browse the DeviceTree documentation at https://docs.zephyrproject.org/latest/guides/dts/index.html
+&uart1{
+    status = "okay";
+    current-speed = < 115200 >;
+	tx-pin = <10>;
+	rx-pin = <11>;
+    rx-pull-up;
+};
