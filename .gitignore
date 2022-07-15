@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#Build Folders
+C:\apoplexmed\gitrep\reimagined-psalm-tree\ichip\build
+C:\apoplexmed\gitrep\reimagined-psalm-tree\simp\build
+C:\apoplexmed\gitrep\reimagined-psalm-tree\simp\nrf91
+C:\apoplexmed\gitrep\reimagined-psalm-tree\bchip\build
+.\build
