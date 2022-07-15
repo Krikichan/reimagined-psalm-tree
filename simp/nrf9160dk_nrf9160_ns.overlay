@@ -1,0 +1,12 @@
+&uart1 {
+	status = "okay";
+	current-speed = < 230400 >;
+	label = "UART_1";
+	rx-pin = <10>;
+	tx-pin = <11>; 
+	rx-pull-up;
+};
+
+&gpiote {
+	interrupts = <49 NRF_DEFAULT_IRQ_PRIORITY>;
+};

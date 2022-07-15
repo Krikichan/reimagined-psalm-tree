@@ -1,0 +1,404 @@
+The target system is: Generic - 2.7.99 - arm
+The host system is: Windows - 10.0.19044 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/v1.9.1/toolchain/opt/bin/arm-none-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/apoplexmed/Appli/simp/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/v1.9.1/toolchain/opt/bin/arm-none-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/apoplexmed/Appli/simp/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-none-eabi-gcc.exe (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_13a99 && [1/2] Building C object CMakeFiles/cmTC_13a99.dir/src.c.obj
+[2/2] Linking C executable cmTC_13a99
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0_ succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_ed6ae && [1/2] Building C object CMakeFiles/cmTC_ed6ae.dir/src.c.obj
+[2/2] Linking C executable cmTC_ed6ae
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wpointer_sign_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_3d02b && [1/2] Building C object CMakeFiles/cmTC_3d02b.dir/src.c.obj
+[2/2] Linking C executable cmTC_3d02b
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wpointer_arith_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_fbd31 && [1/2] Building C object CMakeFiles/cmTC_fbd31.dir/src.c.obj
+[2/2] Linking C executable cmTC_fbd31
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wexpansion_to_defined_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_ccdb5 && [1/2] Building C object CMakeFiles/cmTC_ccdb5.dir/src.c.obj
+[2/2] Linking C executable cmTC_ccdb5
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wlogical_op_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_605d3 && [1/2] Building C object CMakeFiles/cmTC_605d3.dir/src.c.obj
+[2/2] Linking C executable cmTC_605d3
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wmissing_field_initializers_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_da0e7 && [1/2] Building C object CMakeFiles/cmTC_da0e7.dir/src.c.obj
+[2/2] Linking C executable cmTC_da0e7
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wpacked_bitfield_compat_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_600f3 && [1/2] Building C object CMakeFiles/cmTC_600f3.dir/src.c.obj
+[2/2] Linking C executable cmTC_600f3
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wvla_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_f62ae && [1/2] Building C object CMakeFiles/cmTC_f62ae.dir/src.c.obj
+[2/2] Linking C executable cmTC_f62ae
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wunused_but_set_variable_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_3dc9f && [1/2] Building C object CMakeFiles/cmTC_3dc9f.dir/src.c.obj
+[2/2] Linking C executable cmTC_3dc9f
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Werror_implicit_int_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_a39ff && [1/2] Building C object CMakeFiles/cmTC_a39ff.dir/src.c.obj
+[2/2] Linking C executable cmTC_a39ff
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_freestanding_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_264f7 && [1/2] Building C object CMakeFiles/cmTC_264f7.dir/src.c.obj
+[2/2] Linking C executable cmTC_264f7
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_gdwarf_4_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_9d03f && [1/2] Building C object CMakeFiles/cmTC_9d03f.dir/src.c.obj
+[2/2] Linking C executable cmTC_9d03f
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___print_memory_usage succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_b80ef && [1/2] Building C object CMakeFiles/cmTC_b80ef.dir/src.c.obj
+[2/2] Linking C executable cmTC_b80ef
+Memory region         Used Size  Region Size  %age Used
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fsanitize_address succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_f66de && [1/2] Building C object CMakeFiles/cmTC_f66de.dir/src.c.obj
+[2/2] Linking C executable cmTC_f66de
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__fsanitize_undefined succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_87d2d && [1/2] Building C object CMakeFiles/cmTC_87d2d.dir/src.c.obj
+[2/2] Linking C executable cmTC_87d2d
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__no_pie succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_ab9ef && [1/2] Building C object CMakeFiles/cmTC_ab9ef.dir/src.c.obj
+[2/2] Linking C executable cmTC_ab9ef
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__mcpu_cortex_m4 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_cbd1c && [1/2] Building C object CMakeFiles/cmTC_cbd1c.dir/src.c.obj
+[2/2] Linking C executable cmTC_cbd1c
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__mthumb succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_c8be0 && [1/2] Building C object CMakeFiles/cmTC_c8be0.dir/src.c.obj
+[2/2] Linking C executable cmTC_c8be0
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__mabi_aapcs succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_9b52d && [1/2] Building C object CMakeFiles/cmTC_9b52d.dir/src.c.obj
+[2/2] Linking C executable cmTC_9b52d
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__mfp16_format_ieee succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_222f2 && [1/2] Building C object CMakeFiles/cmTC_222f2.dir/src.c.obj
+[2/2] Linking C executable cmTC_222f2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___gc_sections succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_95b98 && [1/2] Building C object CMakeFiles/cmTC_95b98.dir/src.c.obj
+[2/2] Linking C executable cmTC_95b98
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___build_id_none succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_9b2fd && [1/2] Building C object CMakeFiles/cmTC_9b2fd.dir/src.c.obj
+[2/2] Linking C executable cmTC_9b2fd
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___sort_common_descending succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_79f2e && [1/2] Building C object CMakeFiles/cmTC_79f2e.dir/src.c.obj
+[2/2] Linking C executable cmTC_79f2e
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___sort_section_alignment succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_a4688 && [1/2] Building C object CMakeFiles/cmTC_a4688.dir/src.c.obj
+[2/2] Linking C executable cmTC_a4688
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__nostdlib succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_6965d && [1/2] Building C object CMakeFiles/cmTC_6965d.dir/src.c.obj
+[2/2] Linking C executable cmTC_6965d
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__static succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_365bd && [1/2] Building C object CMakeFiles/cmTC_365bd.dir/src.c.obj
+[2/2] Linking C executable cmTC_365bd
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl__X succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_64448 && [1/2] Building C object CMakeFiles/cmTC_64448.dir/src.c.obj
+[2/2] Linking C executable cmTC_64448
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl__N succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_086f5 && [1/2] Building C object CMakeFiles/cmTC_086f5.dir/src.c.obj
+[2/2] Linking C executable cmTC_086f5
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___orphan_handling_warn succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_1c853 && [1/2] Building C object CMakeFiles/cmTC_1c853.dir/src.c.obj
+[2/2] Linking C executable cmTC_1c853
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_asynchronous_unwind_tables_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_e7bb1 && [1/2] Building C object CMakeFiles/cmTC_e7bb1.dir/src.c.obj
+[2/2] Linking C executable cmTC_e7bb1
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_pie_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_5eb7f && [1/2] Building C object CMakeFiles/cmTC_5eb7f.dir/src.c.obj
+[2/2] Linking C executable cmTC_5eb7f
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_pic_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_25bf8 && [1/2] Building C object CMakeFiles/cmTC_25bf8.dir/src.c.obj
+[2/2] Linking C executable cmTC_25bf8
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_strict_overflow_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_858be && [1/2] Building C object CMakeFiles/cmTC_858be.dir/src.c.obj
+[2/2] Linking C executable cmTC_858be
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_reorder_functions_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_e5e6f && [1/2] Building C object CMakeFiles/cmTC_e5e6f.dir/src.c.obj
+[2/2] Linking C executable cmTC_e5e6f
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_defer_pop_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_f30c8 && [1/2] Building C object CMakeFiles/cmTC_f30c8.dir/src.c.obj
+[2/2] Linking C executable cmTC_f30c8
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fmacro_prefix_map_C__apoplexmed_Appli_simp_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_076e8 && [1/2] Building C object CMakeFiles/cmTC_076e8.dir/src.c.obj
+[2/2] Linking C executable cmTC_076e8
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fmacro_prefix_map_C__ncs_v1_9_1_zephyr_ZEPHYR_BASE_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_16e86 && [1/2] Building C object CMakeFiles/cmTC_16e86.dir/src.c.obj
+[2/2] Linking C executable cmTC_16e86
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fmacro_prefix_map_C__ncs_v1_9_1_WEST_TOPDIR_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_2b7b2 && [1/2] Building C object CMakeFiles/cmTC_2b7b2.dir/src.c.obj
+[2/2] Linking C executable cmTC_2b7b2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_ffunction_sections_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_50e37 && [1/2] Building C object CMakeFiles/cmTC_50e37.dir/src.c.obj
+[2/2] Linking C executable cmTC_50e37
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fdata_sections_C__nostartfiles__nostdlib__isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include___isystem__c__ncs_v1_9_1_toolchain_opt_bin____lib_gcc_arm_none_eabi_9_2_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/apoplexmed/Appli/simp/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/v1.9.1/toolchain/opt/bin/ninja.exe cmTC_a88d6 && [1/2] Building C object CMakeFiles/cmTC_a88d6.dir/src.c.obj
+[2/2] Linking C executable cmTC_a88d6
+
+
+Source file was:
+int main(void) { return 0; }

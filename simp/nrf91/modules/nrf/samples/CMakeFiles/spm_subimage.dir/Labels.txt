@@ -1,0 +1,13 @@
+# Target labels
+ spm_subimage
+# Source files and their labels
+C:/apoplexmed/Appli/simp/nrf91/modules/nrf/samples/CMakeFiles/spm_subimage
+C:/apoplexmed/Appli/simp/nrf91/modules/nrf/samples/CMakeFiles/spm_subimage.rule
+C:/apoplexmed/Appli/simp/nrf91/modules/nrf/samples/CMakeFiles/spm_subimage-complete.rule
+C:/apoplexmed/Appli/simp/nrf91/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-build.rule
+C:/apoplexmed/Appli/simp/nrf91/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-configure.rule
+C:/apoplexmed/Appli/simp/nrf91/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-download.rule
+C:/apoplexmed/Appli/simp/nrf91/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-install.rule
+C:/apoplexmed/Appli/simp/nrf91/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-mkdir.rule
+C:/apoplexmed/Appli/simp/nrf91/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-patch.rule
+C:/apoplexmed/Appli/simp/nrf91/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-update.rule
