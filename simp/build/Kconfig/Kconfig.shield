@@ -1,6 +1,0 @@
-osource "c:/ncs/v1.9.1/zephyr/boards/boards/shields/*/Kconfig.shield"
-osource "c:/ncs/v1.9.1/nrf/boards/arm/boards/shields/*/Kconfig.shield"
-osource "c:/ncs/v1.9.1/zephyr/boards/arm/nrf52840dk_nrf52840/boards/shields/*/Kconfig.shield"
-osource "c:/ncs/v1.9.1/zephyr/boards/arm/nrf9160dk_nrf9160/boards/shields/*/Kconfig.shield"
-osource "c:/apoplexmed/Appli/fuckinguart/boards/shields/*/Kconfig.shield"
-osource "C:/ncs/v1.9.1/nrf/boards/shields/*/Kconfig.shield"
