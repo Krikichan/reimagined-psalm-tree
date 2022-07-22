@@ -1,9 +1,3 @@
-/*10
- * Copyright (c) 2018 Nordic Semiconductor ASA
- *
- * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
- */
-
 /** @file
  *  @brief Bluetooth Application Chip Programm Enabling DFU of the Chip Structure
  */
@@ -36,20 +30,20 @@
 #include <logging/log.h>
 #include <dfu/mcuboot.h>
 
-#include "app_cmd.h"
+#include "simp.h"
 #include "app_flash.h"
-#include "app_flash_cmd.h"
-#include "ble_dfu_helper.h"
-
-#include "blecmds.h"
-
+#include "dfu_module_52.h"
 
 LOG_MODULE_REGISTER(main,3);
-
-#define DEVICE_NAME "hello"
+//Bluetooth Config
+#define DEVICE_NAME "Appli"
 #define DEVICE_NAME_LEN	(sizeof(DEVICE_NAME) - 1)
 
-#define UART_DEVICE_LABEL "UART_0"
+#define CMD_OP_GO_TO_SLEEP			0xC0
+
+static K_SEM_DEFINE(ble_init_ok, 0, 1);
+
+#define UART_DEVICE_LABEL "UART_1"
 
 #define RUN_STATUS_LED DK_LED1
 #define RUN_LED_BLINK_INTERVAL 1000
@@ -58,12 +52,9 @@ LOG_MODULE_REGISTER(main,3);
 
 #define UPDATE_APP 					false
 
-
 static struct device *uart;
 
 static struct bt_conn *current_conn;
-
-static K_SEM_DEFINE(ble_init_ok, 0, 1);
 
 static const struct bt_data ad[] = {
 	BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
@@ -120,6 +111,7 @@ static void disconnected(struct bt_conn *conn, uint8_t reason)
 		dk_set_led_off(CON_STATUS_LED);
 	}
 }
+
 static bool le_param_req(struct bt_conn *conn, struct bt_le_conn_param *param)
 {
 	//If acceptable params, return true, otherwise return false.
@@ -172,6 +164,34 @@ void error(void)
 	}
 }
 
+/**@brief app_cmd request & response event handler.
+ *		 Note, don't run long-time task here. 
+ */
+static void app_cmd_event_handler(cmd_event_t* p_event)
+{
+
+	switch (p_event->op_code) {
+	case CMD_OP_FLASH_INFO_52:
+		LOG_INF("Start to receive DFU image by UART");
+		break;
+
+	case CMD_OP_FLASH_DONE_52:
+		LOG_INF("DFU image is received by UART");
+		LOG_INF("File size is: %d", sys_get_le32(p_event->p_data));	
+		dfu_file_ready(IMAGE_FROM_SERIAL);
+
+		break;
+	default:
+		LOG_DBG("cmd op: 0x%02x", p_event->op_code);
+		break;
+	}
+}
+
+void rsp_nrf91_sleep(uint8_t* p_rsp, uint16_t rsp_len){
+	LOG_INF("NRF91 is now Sleepy");
+	//Todo Maybe remember that nrf91 is sleeping -> boolean
+}
+
 static void bt_ready(int err)
 {
 	LOG_INF("BT Host Stack enabled");
@@ -202,61 +222,25 @@ static void bt_ready(int err)
 		return;
 	}
 
-	//k_sem_give(&ble_init_ok);
+	k_sem_give(&ble_init_ok);
 }
-
 
 
 /**@brief Do mcuboot dfu for 52 */
 void do_mcuboot_dfu(void)
 {
-    sys_reboot(SYS_REBOOT_WARM);
+	LOG_INF("Rebooting ....");
+	sys_reboot(SYS_REBOOT_WARM);
 }
-
-/**@brief app_cmd request & response event handler.
- *		 Note, don't run long-time task here. 
- */
-static void app_cmd_event_handler(cmd_event_t* p_event)
-{
-	static uint32_t start_time;
-	uint32_t total_time;
-	uint32_t speed_integer;
-	uint32_t speed_fraction;
-	uint32_t  m_image_file_size;
-	
-	switch (p_event->op_code) {
-	case CMD_OP_FLASH_INFO_52:
-		LOG_INF("Start to receive DFU image by UART");
-		start_time = k_uptime_get_32();
-		break;
-
-	case CMD_OP_FLASH_DONE_52:
-		LOG_INF("DFU image is received by UART");
-		m_image_file_size = sys_get_le32(p_event->p_data);
-		LOG_INF("File size is: %d", m_image_file_size);	
-
-		total_time = k_uptime_get_32() - start_time;
-		speed_integer = m_image_file_size / total_time;
-		speed_fraction = (m_image_file_size % total_time) * 100 / total_time;
-
-		LOG_INF("UART transferring speed: %d.%d kB/s", speed_integer, speed_fraction);
-
-		dfu_file_ready(IMAGE_FROM_SERIAL);
-		break;
-
-	default:
-		LOG_DBG("cmd op: 0x%02x", p_event->op_code);
-		break;
-	}
-}
-
 
 void button_handel(uint32_t button_state,uint32_t has_changed){
-	if(DK_BTN2 & button_state){
+	int err;
+	if(DK_BTN1_MSK & button_state){
+	}
+	if(DK_BTN2_MSK & button_state){
 		do_mcuboot_dfu();
 	}
 }
-
 
 void main(void)
 {
@@ -293,26 +277,25 @@ void main(void)
 		return;
 	}
 
-	//err = bt_enable(bt_ready);
+	err = bt_enable(bt_ready);
 	if (err) {
 		error();
 	}
 
-	//err = k_sem_take(&ble_init_ok, K_MSEC(100));
+	err = k_sem_take(&ble_init_ok, K_MSEC(100));
 	//Need to wait here
-	//k_sem_give(&ble_init_ok);
+	k_sem_give(&ble_init_ok);
 	/* All initializations were successful mark image as working so that we
 	 * will not revert upon reboot.
 	 */
 	boot_write_img_confirmed();
 
-
-	app_cmd_init(uart);
+    app_cmd_init(uart);
 	app_cmd_event_cb_register(app_cmd_event_handler);
 
+	app_cmd_add(CMD_OP_GO_TO_SLEEP,NULL,NULL);
 
-	module_init();
-	app_flash_cmd_init(); //bl_flash_cb Declared in DFU_BL_Helper.h
+	initalize_dfu_module();
 
 	LOG_INF("Init completed, Idling till Update or Connect");
 	
