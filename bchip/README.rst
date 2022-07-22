@@ -1,33 +1,14 @@
 .. _hello_world:
 
-Hello World
+POC B-CHIP Application
 ###########
 
 Overview
 ********
 
-A simple sample that can be used with any :ref:`supported board <boards>` and
-prints "Hello World" to the console.
+Allows a Bluetooth Enabled DK / Chip to Update itself or a connected nRF Chip/DK via Uart using a Bluetooth Connection.
 
 Building and Running
 ********************
 
-This application can be built and executed on QEMU as follows:
-
-.. zephyr-app-commands::
-   :zephyr-app: samples/hello_world
-   :host-os: unix
-   :board: qemu_x86
-   :goals: run
-   :compact:
-
-To build for another board, change "qemu_x86" above to that board's name.
-
-Sample Output
-=============
-
-.. code-block:: console
-
-    Hello World! x86
-
-Exit QEMU by pressing :kbd:`CTRL+A` :kbd:`x`.
+This Application can be build and run on all BT Enabled Nordic Chips / DK
