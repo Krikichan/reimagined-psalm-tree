@@ -46,17 +46,27 @@ class BD: NSObject{
     var lastidx: Int = 0
     var running = true
     var updating = false
+    var autoconnect = true
     
     var filename:String = " "
     var filename91:String = " "
     var filename52:String = " "
-    
+    //Construtor
     override public required init(){
         super.init()
         centralManager = CBCentralManager.init(delegate: self, queue: nil)
         
     }
+    //"Main" Run Loop Catches the Program and enables Eventbased BT Stack Events
+    func run(){
+        let runLoop = RunLoop.current
+        let distantFuture = Date.distantFuture
+
+        while running == true && runLoop.run(mode: RunLoop.Mode.default, before: distantFuture) {}
+        
+    }
     
+    //Scanns Arguments given to Program on Terminal Call
     func getArguments(){
         whattoupdate = UInt8(CommandLine.arguments[2])! //0 nrf52 1 nrf91 2 Both
 
@@ -77,7 +87,7 @@ class BD: NSObject{
     }
     
     func usage(){
-        
+        print("-u x -b y -i z")
     }
     
     func getDataObject(name:String) -> Data? {
@@ -95,7 +105,7 @@ class BD: NSObject{
         }
         return contents
     }
-    
+    //Extracts MTU-1 Sized Chunks of Data
     func extract() -> Data? {
     guard adata!.count > 0 else {
         return nil
@@ -125,15 +135,8 @@ class BD: NSObject{
     // Return the new copy of data
         return subData
     }
-
-    func run(){
-        let runLoop = RunLoop.current
-        let distantFuture = Date.distantFuture
-
-        while running == true && runLoop.run(mode: RunLoop.Mode.default, before: distantFuture) {}
-        
-    }
-
+    
+    //Processes Received BT Data from DEVICE INFO Call
     func process_rec_Data() -> Data? {
         guard receivedData!.count > 0 else {
             return nil
@@ -158,7 +161,66 @@ class BD: NSObject{
         print("Just out of Curiosity FW Vers 52\(cur_majorfw52) \(cur_minorfw52) 91 \(cur_majorfw92) \(cur_minorfw92) Sizes 52 \(avsize52) 91 \(avsize91)")
         return subData
     }
+    func pre_logic(){
+        var _ = process_rec_Data() // Processes what to Update
+        getArguments() // Gets Filename and what to Update
+
+        if(whattoupdate == 0){//52
+            //Todo Make Receive Data usefull
+            print("Updating nRF 52 Using File: ",filename)
+            adata = getDataObject(name: filename)
+            file_size = adata.count
+            print("File Size ",file_size)
+            
+            if(avsize52 < adata.count){
+                print("Available Size on 52 too Small")
+                //Todo Stop Connection and Tell to Abort
+                return
+            }
+            
+            if(cur_majorfw52 > m_majorfw ){
+                print("Major FW 52 not upto date")
+            }
+        }
+        if(whattoupdate == 1){//92
+            print("Updating nRF91 Using File",filename)
+            adata = getDataObject(name: filename)
+            file_size = adata.count
+            print("File Size ",file_size)
+
+            if(avsize91 < adata.count){
+                print("Available Size on 92 too Small")
+                //Todo Stop Connection and Tell to Abort
+                return
+            }
+
+            //Only Compare Major but allow Downgrading
+            if(cur_majorfw92 > m_majorfw ){
+                print("Major FW 92 not upto date")
+            }
+            //Go ahead and reqeuest Update
+            
+        }
+        if(whattoupdate == 2){//first
+
+            if(avsize91 < adata.count){
+                print("Available Size on 92 too Small")
+                //Todo Stop Connection and Tell to Abort
+                return
+            }
+
+            if(cur_majorfw92 > m_majorfw ){
+                print("Major FW 92 not upto date")
+                return
+            }
+            adata = getDataObject(name: filename91)
+            //Go ahead and reqeuest Update
+        }
+        lastopcode = 1
+        logic()
+    }
     
+    //Does Logik based on OpCodes (These OPCodes are in the Header file of the bt dfumodule)
     func logic(){
         // I like your funny words Music man
         var bufferData = Data()
@@ -179,7 +241,7 @@ class BD: NSObject{
         case 1:// Send Info (for Info Request) Sends File Size and Int indicating what to update
 
             print("File Size in Bytes:\(adata.count)")
-            print("What to Update:\(whattoupdate)")
+            print("What to Update: ",whattoupdate!)
 
             bufferData.append(1)
 
@@ -192,15 +254,6 @@ class BD: NSObject{
             bufferData.append(2)
             bufferData.append(extract()!)//extract gets next bytes
             break
-        case 3: //Start Receiving from Offset (not impl)
-            //extract_from_offset()
-            break
-        case 4: //Send Init Buffer for DFU Target to identify Type (not impl)
-            break
-        case 5: //Restart Process (not impl) should start from begenning (ergo send Start request)
-            //restart()
-            updating = false
-            break
         case 6: //Stop Updating (not impl) should stop everything
             updating = false
             break
@@ -209,34 +262,42 @@ class BD: NSObject{
             print("-----------------------------------------------------")
             //Reinitialise
             lastidx = 0
-            lastopcode = 0
-            updating = false
+
+            //Check if another Update has to be done
+            if(whattoupdate == 2){
+                //Means Update Self
+                print("Starting Self Update")
+                whattoupdate = 0
+                lastopcode = 8
+                adata = getDataObject(name: filename52)
+                file_size = adata.count
+                
+                print("File Size in Bytes:\(adata.count)")
+                bufferData.append(lastopcode)
+
+            }else{
+                autoconnect = false
+                stopScanning()
+                bufferData.append(254)//Mark Update as Done
+            }
+
             break
-        case 8: //Restart Process for Second Update
-            lastidx = 0
+
+        case 10://Marks Start of Self Update after NRF91 Update
             lastopcode = 1
-            
-            adata = getDataObject(name: filename52)
-            file_size = adata.count
-            
-            print("File Size in Bytes:\(adata.count)")
-            whattoupdate  = 0
-            updating = true
-            
             bufferData.append(1)
-            
             withUnsafeBytes(of: adata.count.littleEndian) { bufferData.append(contentsOf: $0) }//Append Size of File
             withUnsafeBytes(of: whattoupdate.littleEndian) { bufferData.append(contentsOf: $0) }//Append Update Type
+            print("Data Info send")
+            print("-----------------------------------------------------")
             break
             
         case 32://Retrieved Data ("hex 20")
             //Do logik on what to and if to update
             print("Received Device Information")
-            logic_helper() //Invokes Logic handler again
+            pre_logic() //Invokes Logic handler again
             return
-        case 255:
-
-            print("Disconnected")
+            
         default:
             print("Unknown OP Code: ",lastopcode)
             break
@@ -247,75 +308,8 @@ class BD: NSObject{
             writeOutgoingValue(data: bufferData)
         }
     }
-    func logic_helper(){
-        var _ = process_rec_Data() // Processes what to Update
-        getArguments() // Gets Filename and what to Update
-
-        if(whattoupdate == 0){//52
-            //Todo Make Receive Data usefull
-            filename = "fw52.bin"
-            adata = getDataObject(name: filename)
-            file_size = adata.count
-            print("File Size ",file_size)
-            lastopcode = 1
-            logic()
-            return
-            
-            if(avsize52 < adata.count){
-                print("Available Size on 52 too Small")
-                //Todo Stop Connection and Tell to Abort
-                return
-            }
-            
-            if(cur_majorfw52 > m_majorfw ){
-                print("Major FW 52 not upto date")
-                return
-            }
-            //Go ahead and reqeuest Update
-            
-            adata = getDataObject(name: filename52)
-            
-        }
-        if(whattoupdate == 1){//92
-            adata = getDataObject(name: filename)
-            file_size = adata.count
-            print("File Size ",file_size)
-            lastopcode = 1
-            logic()
-            return
-            if(avsize91 < adata.count){
-                print("Available Size on 92 too Small")
-                //Todo Stop Connection and Tell to Abort
-                return
-            }
-
-            
-            if(cur_majorfw92 > m_majorfw ){
-                print("Major FW 92 not upto date")
-            }
-            //Go ahead and reqeuest Update
-            
-            adata = getDataObject(name: filename91)
-        }
-        if(whattoupdate == 2){//first
-
-            if(avsize91 < adata.count){
-                print("Available Size on 92 too Small")
-                //Todo Stop Connection and Tell to Abort
-                return
-            }
-
-            
-            if(cur_majorfw92 > m_majorfw ){
-                print("Major FW 92 not upto date")
-                return
-            }
-            adata = getDataObject(name: filename91)
-            //Go ahead and reqeuest Update
-        }
-        lastopcode = 1
-        logic()
-    }
+    
+    //BT Helper Functions
     func disconnectFromDevice () {
         if dkPeripheral != nil {
         centralManager?.cancelPeripheralConnection(dkPeripheral!)
@@ -373,8 +367,9 @@ extension BD: CBCentralManagerDelegate {
         dkPeripheral.delegate = self
         
         print("Peripheral Discovered: \(peripheral)")
-        
-        centralManager?.connect(dkPeripheral!,options: nil)
+        if(autoconnect){
+            centralManager?.connect(dkPeripheral!,options: nil)
+        }
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
@@ -417,7 +412,7 @@ extension BD: CBPeripheralDelegate {
                 rxCharacteristic = characteristic
                 mtusize = dkPeripheral.maximumWriteValueLength(for: .withoutResponse) - 1
                 if (mtusize != 128){
-                    print("Warning MTU Size is not 128, it is: \(mtusize)")
+                    print("Warning MTU Size is not 128, it is: ",mtusize!)
                 }
 
                 print("RX Characteristic: \(rxCharacteristic.uuid)")
@@ -431,7 +426,7 @@ extension BD: CBPeripheralDelegate {
             }
 
           }
-        print("MTU Size: \(mtusize)")
+        print("MTU Size: ",mtusize!)
         print("Ready to communicate, Starting File Update")
         logic() // Starts Transmission
     }
@@ -447,9 +442,7 @@ extension BD: CBPeripheralDelegate {
             print("Empty Data")
             return
         }
-        //Todo Add Logik Deciding what to update
-        //I need to understand how Bytes are received
-        receivedData = data
+        receivedData = data //Includes First Byte
         lastopcode = firstByte
         
         logic()

@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		417C4BB0288A8CB60071B0E6 /* UTIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C4BAF288A8CB60071B0E6 /* UTIL.swift */; };
 		418E73A02833ACC0004F826A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E739F2833ACC0004F826A /* main.swift */; };
 		418E73A92833BE8E004F826A /* BD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E73A82833BE8E004F826A /* BD.swift */; };
 		41BE3E742837CB3A00E0D88A /* CBUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BE3E732837CB3A00E0D88A /* CBUUIDs.swift */; };
-		41BE3E762837CE8A00E0D88A /* Ble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BE3E752837CE8A00E0D88A /* Ble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,12 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		417C4BAF288A8CB60071B0E6 /* UTIL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTIL.swift; sourceTree = "<group>"; };
 		418E739C2833ACC0004F826A /* BDUNK */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BDUNK; sourceTree = BUILT_PRODUCTS_DIR; };
 		418E739F2833ACC0004F826A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		418E73A82833BE8E004F826A /* BD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BD.swift; sourceTree = "<group>"; };
 		41BE3E732837CB3A00E0D88A /* CBUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUIDs.swift; sourceTree = "<group>"; };
-		41BE3E752837CE8A00E0D88A /* Ble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +64,6 @@
 				418E739F2833ACC0004F826A /* main.swift */,
 				418E73A82833BE8E004F826A /* BD.swift */,
 				41BE3E732837CB3A00E0D88A /* CBUUIDs.swift */,
-				41BE3E752837CE8A00E0D88A /* Ble.swift */,
-				417C4BAF288A8CB60071B0E6 /* UTIL.swift */,
 			);
 			path = BDUNK;
 			sourceTree = "<group>";
@@ -134,9 +128,7 @@
 			files = (
 				418E73A02833ACC0004F826A /* main.swift in Sources */,
 				418E73A92833BE8E004F826A /* BD.swift in Sources */,
-				417C4BB0288A8CB60071B0E6 /* UTIL.swift in Sources */,
 				41BE3E742837CB3A00E0D88A /* CBUUIDs.swift in Sources */,
-				41BE3E762837CE8A00E0D88A /* Ble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

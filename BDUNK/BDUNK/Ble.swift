@@ -7,8 +7,4 @@
 
 import Foundation
 import CoreBluetooth
-class BT:
-    private var centralManager: CBCentralManager!
-    private var dkPeripheral: CBPeripheral!
-    private var txCharacteristic: CBCharacteristic!
-    private var rxCharacteristic: CBCharacteristic!
+
