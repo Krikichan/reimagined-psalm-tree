@@ -1,12 +1,13 @@
-Bluetooth Cross Update
+Test Programm For the SIMP Lib
 ###########
 
 Overview
 ********
 
-Allows the Alternative Setup to Update itself via a Bluetooth Connection
+Allows two Nordic Chips to Exchange Commands and Data via UART
+Capabilty for CRC Checking
 
 Building and Running
 ********************
 
-This application can be built and executed on a nRF52 with BT enabled
+This application can be built and executed on all Nordic DK that have a Functioning UART Module
